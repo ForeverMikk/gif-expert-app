@@ -18,7 +18,7 @@ export const GifExpertApp = () => {
       <h2>Aplicacion de GifExpertApp</h2>
       <hr />
 
-      <AddCategory />
+      <AddCategory setCategories={setCategories} />
 
       <ul>
         {categories.map((category) => {
