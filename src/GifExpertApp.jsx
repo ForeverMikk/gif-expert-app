@@ -3,12 +3,7 @@ import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["One Punch"]);
-
-  // const handleAdd = () => {
-  //   setCategories([...categories, "HunterXHunter"]);
-  //   // setCategories([...categories.concat("HunterXHunter")]);
-  // };
+  const [categories, setCategories] = useState(["One Punch", "Overwatch"]);
 
   return (
     <>

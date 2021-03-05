@@ -30,6 +30,7 @@ input {
 }
 
 .card {
+  animation-duration: 1.5s;
   align-content: center;
   border: 1px solid grey;
   border-radius: 5px;

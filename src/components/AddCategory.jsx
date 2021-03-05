@@ -13,7 +13,7 @@ export const AddCategory = ({ setCategories }) => {
     event.preventDefault();
     // console.log("Sumbit Hecho");
     if (inputValue.trim().length > 2) {
-      setCategories((categories) => [...categories, inputValue]);
+      setCategories((categories) => [inputValue, ...categories]);
       setInputValue("");
     }
   };
