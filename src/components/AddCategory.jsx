@@ -1,8 +1,9 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
-const AddCategory = ({ setCategories }) => {
+const AddCategory = ({ onNewCategory }) => {
 
-    const [inputValue, setInputValue] = useState('One Punch');
+    const [inputValue, setInputValue] = useState('');
 
     const onInputChange = ({target}) => {
         setInputValue(target.value);
@@ -10,9 +11,12 @@ const AddCategory = ({ setCategories }) => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        // Si no 
+        // Si el valor ingresado es menor o iguala 1 no actualiza el valor
         if(inputValue.trim().length <= 1 ) return;
-        setCategories(categories => [inputValue, ...categories]);
+
+
+        // setCategories(categories => [inputValue, ...categories]);
+        onNewCategory(inputValue.trim());
         setInputValue('')
     }
 
@@ -28,6 +32,10 @@ const AddCategory = ({ setCategories }) => {
             <button type="submit">Agregar</button>
         </form>
     )
+}
+
+AddCategory.propTypes = {
+    onNewCategory: PropTypes.function
 }
 
 export default AddCategory;

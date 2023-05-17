@@ -3,12 +3,13 @@ import AddCategory from "./components/AddCategory";
 
 const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['One Punch', 'Dragon BarProp']);
+    const [categories, setCategories] = useState(['One Punch']);
     // const apiKey = 'PwoOVKqTZhYP4clsAkwqrZ1ueTYAHGnd';
 
-    // const onAddCategory = () => {
-    //     setCategories(['Nueva Categoria', ...categories]);
-    // }
+    const onAddCategory = (newCategory) => {
+        if(categories.includes(newCategory)) return; //Si la categoria se repite no te deja ingresarla
+        setCategories([newCategory, ...categories]);
+    }
 
     return(
         <>
@@ -16,7 +17,9 @@ const GifExpertApp = () => {
             <h1>GifExpert App</h1>
 
             {/* Input */}
-            <AddCategory setCategories={setCategories} categories={categories} />
+            <AddCategory 
+                onNewCategory={value => onAddCategory(value)} 
+            />
 
             {/* Listado de Gifs */}
             <ol>
