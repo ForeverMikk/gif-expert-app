@@ -29,7 +29,7 @@ const AddCategory = ({ onNewCategory }) => {
                 onChange={onInputChange}
             />
 
-            <button type="submit">Agregar</button>
+            {/* <button type="submit">Agregar</button> */}
         </form>
     )
 }
