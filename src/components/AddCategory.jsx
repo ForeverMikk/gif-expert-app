@@ -35,7 +35,7 @@ const AddCategory = ({ onNewCategory }) => {
 }
 
 AddCategory.propTypes = {
-    onNewCategory: PropTypes.function
+    onNewCategory: PropTypes.func
 }
 
 export default AddCategory;
