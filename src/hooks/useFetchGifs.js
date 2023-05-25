@@ -15,12 +15,13 @@ export const useFetchGifs = (category) => {
         getImages();
     }, []);
 
-    // return {
-    //     images: images,
-    //     isLoading: isLoading
-    // }
     return {
         images,
         isLoading
     }
+    
+    // return {
+    //     images: images,
+    //     isLoading: isLoading
+    // }
 }
