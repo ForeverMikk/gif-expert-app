@@ -10,6 +10,6 @@ describe('pruebas en el helper getGifs', () => {
             id: expect.any(String), // Esperas que el "id" sea un string no importa que
             title: expect.any(String),
             url: expect.any(String)
-        })
-    })
-})
+        });
+    });
+});
